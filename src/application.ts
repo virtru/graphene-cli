@@ -29,8 +29,10 @@ export class Application extends Command {
     }
 
     public async run(args: string[]): Promise<Command> {
+        const shieldingGaps = /('.*?'|".*?"|\S+)/gm;
         const commands = args[2]
-            && args[2].split("\\n").map(((l) => l.split(" ")))
+            && args[2].split("\\n")
+                .map(((l) => l.match(shieldingGaps)))
             || [];
         let repeat = true;
         while (repeat) {
