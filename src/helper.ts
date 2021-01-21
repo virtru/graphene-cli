@@ -1,11 +1,8 @@
 import {randomBytes} from "crypto";
-import {KeyType, ObjectClass, Session, Storage} from "graphene-pk11";
+import {KeyType, ObjectClass, Session, Storage, ITemplate, PublicKey, PrivateKey} from "graphene-pk11";
 import * as NodeRSA from "node-rsa";
-import ITemplate = GraphenePkcs11.ITemplate;
 import {KeyComponentsPublic} from "node-rsa";
 import {KeyComponentsPrivate} from "node-rsa";
-import PublicKey = GraphenePkcs11.PublicKey;
-import PrivateKey = GraphenePkcs11.PrivateKey;
 import * as c from "./const";
 import {PAD_CHAR} from "./const";
 import {ITemplatePair} from "./types";
