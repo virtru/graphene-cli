@@ -9,8 +9,8 @@ import {get_session} from "../slot/helper";
 import {GenerateIfNotExist} from "./options/IfNotExist";
 import {KeyFormatOption} from "./options/KeyFormatOption";
 import {KeyLabelOption} from "./options/KeyLabelOption";
-import Session = GraphenePkcs11.Session;
-import IKeyPair = GraphenePkcs11.IKeyPair;
+import Session = graphene.Session;
+import IKeyPair = graphene.IKeyPair;
 
 export class GenerateCommand extends Command {
     private static genKeyPair(label: string): IKeyPair {

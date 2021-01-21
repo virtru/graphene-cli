@@ -87,7 +87,7 @@ export async function writeSecureObj(obj: Storage,
     return new Promise((resolve, reject) => {
         output.write(key, (err: any) => {
             if (err) reject(err);
-            resolve();
+            resolve(undefined);
         });
     })
 
